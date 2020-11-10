@@ -85,7 +85,7 @@ The full list of Interfaces can be [checked here](https://portswigger.net/burp/e
     </p>
 2. Setup `Artifact build` with IntelliJ. This step is necessary to create jar for your Burp Extender that you will load in your application. Once you have completed the above  step, you will have directory structure of something like this.
     <p align="center">
-    <img src="../../static/images/chapter1/step-1.png" width=50% />
+    <img src="../../static/images/chapter1/step1.png" width=50% />
     </p>
     Now the next step is to setup artifact build which on our case will be Jar. Quikcly navigate through, `File` -> `Project Structure` -> `Project Settings` -> `Artifacts`, then click on `+` which is `Add`.
     <p align="center">
@@ -93,4 +93,6 @@ The full list of Interfaces can be [checked here](https://portswigger.net/burp/e
     <img src="../../static/images/chapter1/build-jar.png" width=50% />
     </p>
     Click `Apply` or `Ok`.
-3. At this step you are ready to go to next chapter.
+3. At this step you are ready to go to [next chapter](series/Chapter2/README.md).
+
+### [Next: Creating Hello World Extender plugin](series/Chapter2/README.md)
