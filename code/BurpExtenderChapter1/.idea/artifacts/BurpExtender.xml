@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BurpExtender">
+    <output-path>$PROJECT_DIR$/out/artifacts/BurpExtender</output-path>
+    <root id="archive" name="BurpExtender.jar" />
+  </artifact>
+</component>
