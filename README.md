@@ -16,7 +16,7 @@ This repo is a series of handouts which will focus on the development of Burp Su
 4. [Intruder Payload processing]()
 5. [Next steps]()
 
-This series is targetted for those, who are interested in **Security Research**, **Bug Hunting**, **Security Engineers** etc. The main requirement is to get the best out of this series is that reader should be able to understand the code writte in `Java`. 
+This series is targeted for those, who are interested in **Security Research**, **Bug Hunting**, **Security Engineers** etc. The main requirement is to get the best out of this series is that reader should be able to understand the code written in `Java`. 
 
 > Burp Offers to write the extensions in Java, Jython, And JRuby. Easiest of all is to prefer writing such extensions in Java. Even I prefer to write it in Java, over the other alternatives because of community support for Java and related tools compared to Jython or JRuby. Writing the same solutions in Jython or JRuby wont be tricky, the extension interfaces exposes similar functionalites, rather it would just requirer the environemnt (Dev & Runtime) to support those.
 

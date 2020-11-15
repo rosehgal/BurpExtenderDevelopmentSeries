@@ -2,3 +2,6 @@
 *.jar
 *.iml
 *.xml
+*.MF
+**/out/
+**/META-INF/
