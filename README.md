@@ -10,9 +10,20 @@ This repo is a series of handouts which will focus on the development of Burp Su
 - Burp :grin:
 
 ## Table of Content
-1. [What is Burp Extender ?](series/Chapter1/README.md)
+1. [What is Burp Extender?](series/Chapter1/README.md)
+    1. [What is Burp Extender?](series/Chapter1/README.md#Burp-Extender)
+    2. [What are Burp API Extender interfaces?](series/Chapter1/README.md#Burp-Extender-Interfaces)
+    3. [Setup Dev Environment using IntelliJ](series/Chapter1/README.md#setup-dev-environment-using-IntelliJ) 
+    4. [Code](code/BurpExtenderChapter1)
 2. [Creating a Hello World Extender](series/Chapter2/README.md)
-3. [Deep Dive into Extender API Interface]()
+    1. [Setting up Extender Development Environment](#setting-up-extender-development-environment)
+    2. [Hello Burp](#hello-burp)
+    3. [Understanding Hello Burp](#understanding-hello-burp)
+    4. [Code](code/BurpExtenderChapter2)
+3. [Deep Dive into Extender API Interface]()  
+    1. [Helper Interface](#helper-interface)
+    1. [Simple URL Encoder](#simple-url-encoder)
+    2. [Interface Registration](#interface-registration)
 4. [Understanding a use case: Intruder Payload processing]()
 5. [Burp Suite Extension - Event Listeners]()
 6. [Burp Suite Extension - Session Tokens Modification]()
