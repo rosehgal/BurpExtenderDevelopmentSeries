@@ -76,4 +76,4 @@ More in [detail](https://portswigger.net/burp/extender/api/burp/iburpextendercal
 
 Extension says `Hello World!`
 
-### [Next Chapter](series/Chapter3/README.md)
+### [Next Chapter : Extender Plugins Deep Dive](series/Chapter3/README.md)
