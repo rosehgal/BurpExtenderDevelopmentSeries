@@ -4,9 +4,9 @@ This repo is a series of handouts which will focus on the development of Burp Su
 
 Burp Suite plugin development is pretty simple, just that there are not much resources online which points in development of such plugins from scratch.
 
-The code presented in the series has been tested with:
+The code presented in the series has been tested with:  
 |Tool|Version|
-|-|-|-|
+|-|-|
 |`java`|`11.0.6`|
 |`Burp`|`CE v2.1.02`|
 |`IntelliJ`|`UE v2019.3.4`|
