@@ -86,3 +86,5 @@ Run it and check the payloads are getting converted to `base64` by our processor
 <p align=center>
 <img src=../../static/images/Chapter4/file3.png width=90%>
 </p>
+
+### [Next Chapter: Burp Suite Extension - Event Listener](series/chapter5/README.md)
