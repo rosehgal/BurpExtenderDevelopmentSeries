@@ -26,7 +26,7 @@ This repo is a series of handouts which will focus on the development of Burp Su
     2. [Interface Registration](#interface-registration)
     3. [Listen for events from Proxy](#listen-for-events-from-proxy)
     3. [Code](../../code/BurpExtenderChapter3)
-4. [Understanding a use case: Intruder Payload processing]()
+4. [Understanding a use case: Intruder Payload processing](series/Chapter4/README.md)
 5. [Burp Suite Extension - Event Listeners]()
 6. [Burp Suite Extension - Session Tokens Modification]()
 5. [Burp Suite Extension - Create HTTP Proxy plugin Example : JWT token on the Go]()
