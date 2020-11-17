@@ -68,7 +68,7 @@ public class BurpExtender implements IBurpExtender {
 `Build` the artifact, load it in Burp.
 
 <p align=center>
-<img src=../../static/images/chapter4/file1.png width=90%>
+<img src=../../static/images/Chapter4/file1.png width=90%>
 </p>
 
 In the item you can see that, `IntruderProcessor` is coming up.
@@ -76,7 +76,7 @@ In the item you can see that, `IntruderProcessor` is coming up.
 Now this Payload processor will pop up in Intruder, payload processor like follows.
 
 <p align=center>
-<img src=../../static/images/chapter4/file2.png width=90%>
+<img src=../../static/images/Chapter4/file2.png width=90%>
 </p>
 
 The name you have entered for Payload processor in the implementing class will come under drop down. Since I entered `Base64 Processor`, it is showing as it is.
@@ -84,5 +84,5 @@ The name you have entered for Payload processor in the implementing class will c
 Run it and check the payloads are getting converted to `base64` by our processor and are executed like wise.
 
 <p align=center>
-<img src=../../static/images/chapter4/file3.png width=90%>
+<img src=../../static/images/Chapter4/file3.png width=90%>
 </p>
