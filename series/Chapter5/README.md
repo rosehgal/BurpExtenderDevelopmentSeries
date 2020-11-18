@@ -106,6 +106,12 @@ public class BurpExtender implements IBurpExtender,
 
 ```
 
+If everything goes well, output would look something like this :smile:
+
+<p align=center>
+<image src="../../static/images/chapter5/file.png" width=90%/>
+</p>
+
 #### [Code](../../code/BurpExtenderChapter5)
 
 ### [Next Chapter: Session token modification](series/Chapter6/README.md)
