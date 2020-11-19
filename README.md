@@ -1,5 +1,7 @@
 # Burp Extension Development Series 
 
+Guide for Noobs and few curious folks `¯\_(ツ)_/¯` :smile:
+
 This repo is a series of handouts which will focus on the development of Burp Suite extensions using [IntelliJ](https://www.jetbrains.com/idea/) & [Java Interfaces](http://tutorials.jenkov.com/java/interfaces.html). When I first started to create extensions for  Burp Suite it was a pain to figure out where to start from or even to find straight-forward sequential resources online was difficult.
 
 Burp Suite plugin development is pretty simple, just that there are not much resources online which points in development of such plugins from scratch.
