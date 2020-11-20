@@ -4,7 +4,7 @@
 This post talks about:
 1. [What is Burp Extender?](#Burp-Extender)
 2. [What are Burp API Extender interfaces?](#Burp-Extender-Interfaces)
-3. [Setup Dev Environemnt using IntelliJ](#setup-dev-environment-using-IntelliJ) 
+3. [Setup Dev Environment using IntelliJ](#setup-dev-environment-using-IntelliJ) 
 4. [Code](../../code/BurpExtenderChapter1)
 
 ## Burp Extender
@@ -90,7 +90,7 @@ The full list of Interfaces can be [checked here](https://portswigger.net/burp/e
     </p>
 
     Now the next step is to setup artifact build which on our case will be Jar.
-    Quikcly navigate through, `File` -> `Project Structure` -> `Project Settings` -> `Artifacts`, then click on `+` which is `Add`.
+    Quickly navigate through, `File` -> `Project Structure` -> `Project Settings` -> `Artifacts`, then click on `+` which is `Add`.
 
     <p align="center">
     <img src="../../static/images/chapter1/artifacts.png" width=50% />
