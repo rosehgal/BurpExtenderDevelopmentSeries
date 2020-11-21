@@ -150,3 +150,6 @@ Goto : `Burp` -> `Project options` -> `Sessions` -> `Session Handling Rule` -> `
 </p>
  
 Now if you make any request through `Scanner` or `Intruder`, It will be routed through Macro and Plugin, which will inject the session header in request.
+
+
+### [Next Chapter: Burp Suite Extension - Create HTTP Proxy plugin Example : JWT token on the Go](series/Chapter7/README.md)
