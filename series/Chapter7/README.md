@@ -3,6 +3,7 @@
 If you have made this far, this would have definitely enticed you about Burp Suite Extender development a bit. And too take this journey forward, Now we will be create a very practical plugin which will decode the JWT token present in the request header under Proxy tab by creating a separate tab under proxy which will display the decoded JWT token present in the request.
 
 ## tl;dr
+[Code](../../code/BurpExtenderChapter7)
 In this chapter we will be creating a proxy tab extender plugin which will decode the JWT token present in the request header and output its decoded value on the GO. To implement such functionality we would need to implement `IMessageEditorTabFactory` interface and register it like we do normally.
 
 Important stuff to remember : `IMessageEditorTabFactory` implementation function will returns a `IMessageEditorTab` instance which tell Burp what a new tab under Burp Proxy would look like.
@@ -58,7 +59,7 @@ public class JWTDecodeTab implements IMessageEditorTab {
     }
 }
 ```
-#### Step 2 : Fill up constructor
+### Step 2 : Fill up constructor
 
 ```java
     public JWTDecodeTab(IMessageEditorController controller, boolean editable, IBurpExtenderCallbacks callbacks) {
@@ -73,10 +74,11 @@ public class JWTDecodeTab implements IMessageEditorTab {
     }
 ```
 
-#### Step 3 : Other functions
+### Step 3 : Other functions
 Explanations are inline with functions.
 
 ```java
+    /*
     This will set the name for this tab under Proxy.
      */
     @Override public String getTabCaption() {
@@ -122,7 +124,7 @@ Explanations are inline with functions.
     }
 ```
 
-#### Step 4 : Important decode function
+### Step 4 : Important decode function
 Explanation Inline.
 ```java
     @Override public void setMessage(byte[] content, boolean isRequest) {
@@ -194,3 +196,6 @@ public class BurpExtender implements IBurpExtender, IMessageEditorTabFactory{
     <p align=center>
         <image src="../../static/images/chapter7/file1.png" />
     </p>
+
+
+### [Next: Burp Suite Extension - Create a Separate tab plugin : JWT Encode/Decode](series/Chapter8/README.md)

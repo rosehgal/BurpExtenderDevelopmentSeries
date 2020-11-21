@@ -47,6 +47,10 @@ The code presented in the series has been tested with:
     2. [Link Burp Macro and Session Handling Plugin together](series/Chapter6/README.md#step-3-Link-Burp-Macro-and-Session-Handling-Plugin-together)
     1. [Code](code/BurpExtenderChapter6)
 5. [Burp Suite Extension - Create HTTP Proxy plugin Example : JWT token on the Go](series/Chapter7/README.md)
+    1. [tl;dr](series/Chapter7/README.md#tldr)
+    1. [Step 1 : Implement `IMessageEditorTab` Interface](series/Chapter7/README.md#step-1--implement-imessageeditortab-interface)
+    1. [JWT decode function](series/Chapter7/README.md#step-4--important-decode-function)
+    1. [Code](code/BurpExtenderChapter6)
 6. [Burp Suite Extension - Create a Separate tab plugin : JWT Encode/Decode]()
 5. [Next steps]()
 
