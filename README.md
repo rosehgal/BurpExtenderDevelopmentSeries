@@ -46,7 +46,7 @@ The code presented in the series has been tested with:
     1. [Create Extender Plugin to consume Macro](series/Chapter6/README.md#step-2-Create-Extender-Plugin-to-consume-Macro)
     2. [Link Burp Macro and Session Handling Plugin together](series/Chapter6/README.md#step-3-Link-Burp-Macro-and-Session-Handling-Plugin-together)
     1. [Code](code/BurpExtenderChapter6)
-5. [Burp Suite Extension - Create HTTP Proxy plugin Example : JWT token on the Go]()
+5. [Burp Suite Extension - Create HTTP Proxy plugin Example : JWT token on the Go](series/Chapter7/README.md)
 6. [Burp Suite Extension - Create a Separate tab plugin : JWT Encode/Decode]()
 5. [Next steps]()
 
