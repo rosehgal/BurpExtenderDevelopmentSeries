@@ -3,13 +3,17 @@ package burp;
 import java.awt.*;
 
 public class JWTDecodeTab implements ITab {
-  public JWTDecodeTab(IBurpExtenderCallbacks callbacks) {}
+  IBurpExtenderCallbacks callbacks;
+
+  public JWTDecodeTab(IBurpExtenderCallbacks callbacks) {
+    this.callbacks = callbacks;
+  }
 
   @Override public String getTabCaption() {
-    return null;
+    return "JWT Decode/Encode";
   }
 
   @Override public Component getUiComponent() {
-    return null;
+    return new JWTDecodeTabForm(callbacks).getFrame();
   }
 }
