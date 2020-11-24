@@ -50,7 +50,7 @@ The code presented in the series has been tested with:
     1. [tl;dr](series/Chapter7/README.md#tldr)
     1. [Step 1 : Implement `IMessageEditorTab` Interface](series/Chapter7/README.md#step-1--implement-imessageeditortab-interface)
     1. [JWT decode function](series/Chapter7/README.md#step-4--important-decode-function)
-    1. [Code](code/BurpExtenderChapter6)
+    1. [Code](code/BurpExtenderChapter7)
 6. [Burp Suite Extension - Create a Separate tab plugin : JWT Encode/Decode](series/Chapter8/README.md)
     1. [tl;dr](series/Chapter8#tldr)
     1. [Creating new tab in Burp](series/Chapter8#creating-a-new-tab-in-burp)
