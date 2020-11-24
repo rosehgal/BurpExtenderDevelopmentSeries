@@ -140,4 +140,4 @@ Once you do all these steps and build artifact, upon loading that into `Burp` wi
     <p align=center>
         <img src="../../static/images/chapter8/file4.png" />
     </p>
-This UI though is not functional as, no click events are registered at all for `Decode` & `Encode` buttons.
+This UI though is not functional as no click events are registered at all for `Decode` & `Encode` buttons.

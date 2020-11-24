@@ -51,7 +51,12 @@ The code presented in the series has been tested with:
     1. [Step 1 : Implement `IMessageEditorTab` Interface](series/Chapter7/README.md#step-1--implement-imessageeditortab-interface)
     1. [JWT decode function](series/Chapter7/README.md#step-4--important-decode-function)
     1. [Code](code/BurpExtenderChapter6)
-6. [Burp Suite Extension - Create a Separate tab plugin : JWT Encode/Decode]()
+6. [Burp Suite Extension - Create a Separate tab plugin : JWT Encode/Decode](series/Chapter8/README.md)
+    1. [tl;dr](series/Chapter8#tldr)
+    1. [Creating new tab in Burp](series/Chapter8#creating-a-new-tab-in-burp)
+    1. [Creating UI for the tab](series/Chapter8#create-ui-for-tab)
+    1. [Completing the `ITab` Burp Extender plugin](series/Chapter8#complete-the-burp-extender-itab-plugin)
+    1. []()
 5. [Next steps]()
 
 This series is targeted for those, who are interested in **Security Research**, **Bug Hunting**, **Security Engineers** etc. The main requirement is to get the best out of this series is that reader should be able to understand the code written in `Java`. 
