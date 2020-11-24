@@ -18,7 +18,6 @@ public class JWTDecodeTabForm {
     private JButton decodeButton;
     private JButton encodeButton;
     private JTextArea payloadFieldTextArea;
-    private JTextArea signatureFieldTextArea;
     private JTextArea jwtSecretTextArea;
     private JComboBox comboBox1;
     private JLabel jwtValidationErrorLabel;
