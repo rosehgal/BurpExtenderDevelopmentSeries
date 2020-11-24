@@ -4,12 +4,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.nio.IntBuffer;
+import java.util.Arrays;
+import java.util.List;
+import java.util.regex.Pattern;
 
-import com.auth0.jwt.*;
-import com.auth0.jwt.algorithms.Algorithm;
-import com.auth0.jwt.exceptions.JWTVerificationException;
-import com.auth0.jwt.interfaces.DecodedJWT;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
+import io.jsonwebtoken.Jwts;
 
 public class JWTDecodeTabForm {
     private JPanel basePanel;
@@ -23,40 +24,24 @@ public class JWTDecodeTabForm {
     private JLabel jwtValidationErrorLabel;
 
     IBurpExtenderCallbacks callbacks;
+    IExtensionHelpers helpers;
 
     public JWTDecodeTabForm(IBurpExtenderCallbacks callbacks) {
         this.callbacks = callbacks;
+        this.helpers = callbacks.getHelpers();
 
         decodeButton.addActionListener(new ActionListener() {
             @Override public void actionPerformed(ActionEvent actionEvent) {
                 callbacks.issueAlert("Level 1");
                 String jwtToken = jwtTokenTextArea.getText().trim();
                 try {
+                    List<String> jwtTokenParts = Arrays.asList(jwtToken.split(Pattern.quote(".")));
 
-                    /*
-                    Use the algorithm with secret provided.
-                     */
-                    Algorithm algorithm = Algorithm.HMAC256(jwtSecretTextArea.getText().trim());
-                    callbacks.issueAlert("Level 2");
-                    /*
-                    Reusable verifier instance
-                     */
-                    JWTVerifier verifier = JWT.require(algorithm)
-                                              .withIssuer("auth0")
-                                              .build();
-                    callbacks.issueAlert("Level 3");
+                    headerFieldTextArea.setText(helpers.bytesToString(helpers.base64Decode(jwtTokenParts.get(0))));
+                    payloadFieldTextArea.setText(helpers.bytesToString(helpers.base64Decode(jwtTokenParts.get(1))));
 
-                    DecodedJWT jwt = verifier.verify(jwtToken);
-                    callbacks.issueAlert("Level 4");
-
-                    headerFieldTextArea.setText(jwt.getHeader());
-                    callbacks.issueAlert("Level 5");
-
-                    payloadFieldTextArea.setText(jwt.getPayload());
-
-                } catch (Exception exception){
-                    callbacks.issueAlert("Exception is there.");
-                    callbacks.issueAlert(exception.getMessage());
+                }catch (Exception e){
+                    JOptionPane.showConfirmDialog(basePanel, e.getMessage(), "Error", 0);
                 }
             }
         });
