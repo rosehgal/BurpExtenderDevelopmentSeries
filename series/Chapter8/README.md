@@ -141,3 +141,56 @@ Once you do all these steps and build artifact, upon loading that into `Burp` wi
         <img src="../../static/images/chapter8/file4.png" />
     </p>
 This UI though is not functional as no click events are registered at all for `Decode` & `Encode` buttons.
+
+## Giving life to `Encode/Decode` buttons
+- Till now we have created a simple ui but the onclick events which is nothing but the lives of this plugin are not created.
+- Right click on decode button and select `Create listener` -> `Action Listener`. Then put in this code.
+    ```java
+        decodeButton.addActionListener(new ActionListener() {
+            @Override public void actionPerformed(ActionEvent actionEvent) {
+                String jwtToken = jwtTokenTextArea.getText().trim();
+                try {
+                    List<String> jwtTokenParts = Arrays.asList(jwtToken.split(Pattern.quote(".")));
+
+                    headerFieldTextArea.setText(helpers.bytesToString(helpers.base64Decode(jwtTokenParts.get(0))));
+                    payloadFieldTextArea.setText(helpers.bytesToString(helpers.base64Decode(jwtTokenParts.get(1))));
+
+                }catch (Exception e){
+                    /*
+                    For pupup, display error in PopUp
+                     */
+                    JOptionPane.showConfirmDialog(basePanel, e.getMessage(), "Error", JOptionPane.OK_CANCEL_OPTION);
+                }
+            }
+        });
+    ```
+
+- Do the same for `Encode`, but its implementation will be slightly different.
+    ```java
+    encodeButton.addActionListener(new ActionListener() {
+            @Override public void actionPerformed(ActionEvent actionEvent) {
+                try{
+                Mac sha512Hmac;
+                String secret = jwtSecretTextArea.getText();
+
+                final byte[] byteKey = secret.getBytes(StandardCharsets.UTF_8);
+                sha512Hmac = Mac.getInstance("HmacSHA512");
+                SecretKeySpec keySpec = new SecretKeySpec(byteKey, "HmacSHA512");
+                sha512Hmac.init(keySpec);
+
+                String partialJwt = helpers.base64Encode(headerFieldTextArea.getText()) +
+                        "." +
+                        helpers.base64Encode(payloadFieldTextArea.getText());
+
+                byte[] macData = sha512Hmac.doFinal(partialJwt.getBytes(StandardCharsets.UTF_8));
+
+                jwtTokenTextArea.setText(partialJwt + '.' + helpers.base64Encode(helpers.bytesToString(macData)));
+
+                }catch (Exception e){
+                    JOptionPane.showConfirmDialog(basePanel, e.getMessage(), "Error", JOptionPane.OK_CANCEL_OPTION);
+                }
+            }
+        });
+    ```
+- There might be some issues in JWT decode and encode functionality but again the motive of this series is to teach you the how to create extension not how to create logic for extensions.
+
