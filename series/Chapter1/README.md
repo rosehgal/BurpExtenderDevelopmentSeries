@@ -9,7 +9,9 @@ This post talks about:
 
 ## Burp Extender
 Burp Extender provides necessary functionality extension required for creation of Burp Suite extensions. 
-The Extender tab exposes all APIs required for development of custom extensions in the form of [Java Interfaces](http://tutorials.jenkov.com/java/interfaces.html). These interfaces provides bindings for non Java environment as well, for Python through [Jython](https://www.jython.org/) and for Ruby through [JRuby](https://www.jruby.org/).
+The Extender tab exposes all APIs required for development of custom extensions in the form of [Java Interfaces](http://tutorials.jenkov.com/java/interfaces.html). These interfaces provides bindings for non Java environment as well, for Python through [Jython](https://www.jython.org/) and for Ruby through [JRuby](https://www.jruby.org/). The library support for Jython and JRuby is not so rich so its is not usually recommended to pick these for plugin development.
+
+This course also picks up plugin development through Java Interfaces.
 
 From now I will be only talking about Java Interfaces.
 
@@ -18,9 +20,9 @@ You can see the list of Interfaces under `Burp` -> `Extender` -> `APIs`.
 <img src="../../static/images/BurpExtenderAPIs.png" width=75%>
 </p>
 
-In the image above if you see, on the left hand side you see the list of all the interfaces available for you to implement a custom functionality and if you select any of those interfaces, you will see the in detail explanation of what that interface does and how/what can be achieved after implementing those interface.
+In the image above if you see, **on the left hand side you see the list of all the interfaces available** for you to implement a custom functionality and if you select any of those interfaces, you will see the in detail explanation of what that interface does and how/what can be achieved after implementing those interface.
 
-`IBurpExtender.java` that the entry point of any Extender plugin you write. And the class implementing this interface should implement `void registerExtenderCallbacks(IBurpExtenderCallbacks callbacks)` abstract function. This is what Java Doc of `IBurpExtender` talks about itself.
+`IBurpExtender` interface class is the entry point of any Extender plugin you write. And the class implementing this interface should implement `void registerExtenderCallbacks(IBurpExtenderCallbacks callbacks)` abstract function. This is what Java Doc of `IBurpExtender` also talks about itself. The implementing class should belong to `burp` package. This package will ge automatically created once you export API Interface classes through Burp.
 
 ```java
 package burp;
