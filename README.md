@@ -57,7 +57,7 @@ The code presented in the series has been tested with:
     1. [Creating UI for the tab](series/Chapter8#create-ui-for-tab)
     1. [Completing the `ITab` Burp Extender plugin](series/Chapter8#complete-the-burp-extender-itab-plugin)
     1. []()
-5. [Next steps]()
+5. [Next steps: Explore different plugins @ Burp official site](https://portswigger.net/burp/extender#SampleExtensions)
 
 This series is targeted for those, who are interested in **Security Research**, **Bug Hunting**, **Security Engineers** etc. The main requirement is to get the best out of this series is that reader should be able to understand the code written in `Java`. 
 
